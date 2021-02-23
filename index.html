@@ -1,0 +1,311 @@
+﻿
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script (1).js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body onload="LoadName()">
+    <div>
+        <img src="back.jpg" id="zastavka" onclick="Back()">
+        <p id=zast_text></p>
+    </div>
+    <main>
+        
+        <div id=content>
+            <div class="header">
+                <!--шапка-->
+                <div>
+                    <nav class="menu">
+                        <div class="hidden">
+                            <ul class="hidden">
+                                <li>
+                                    <a href="#">Возможности</a>
+                                    <ul>
+                                        <li><a href="#math">площадь</a></li>
+                                        <li><a href="#compare">сравнение</a></li>
+                                        <li><a href="#max">min и max</a></li>
+                                        <li><a href="#timer">таймер</a></li>
+                                        <li><a href="#test">тест</a></li>
+                                    </ul>
+                            </ul>
+                        </div>
+                        <div class="unhidden">
+                            <ul>
+                                <li>
+                                    <a href="#">Возможности</a>
+                                    <ul>
+                                        <!--выпадающий список-->
+                                        <li><a href="#math">площадь</a></li>
+                                        <li><a href="#compare">сравнение</a></li>
+                                        <li><a href="#max">min и max</a></li>
+                                        <li><a href="#timer">таймер</a></li>
+                                        <li><a href="#test">тест</a></li>
+                                    </ul>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <a class="but" onclick="Background()"><button>Заставка</button></a>
+                <div><p id="userName" ></p></div>
+            </div>
+        </div>
+        <!--основная часть-->
+        
+        <div class="container0">
+            <div class="content_1">
+                <p>JavaScript</p>
+                <span>Инструмент для создания живых веб-страниц</span>
+            </div>
+            <div class="content_2">
+                <img id="logo" src="logo.png">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container1">
+                <div class="content1">
+                    <p>Изначально JavaScript был создан, чтобы «сделать веб-страницы живыми».</p>
+                    <p>Программы на этом языке называются скриптами. Они могут встраиваться в HTML и выполняться автоматически при загрузке веб-страницы.</p>
+                    <p>Скрипты распространяются и выполняются, как простой текст. Им не нужна специальная подготовка или компиляция для запуска. Это отличает JavaScript от другого языка – Java.</p>
+                </div>
+                <div class="content2"><img id="comp" src="comp.png"></div>
+            </div>
+
+            <div class="container2">
+                <div class="content3">
+                    <p>В браузере для JavaScript доступно всё, что связано с манипулированием веб-страницами, взаимодействием с пользователем и веб-сервером. Например, в браузере JavaScript может:</p>
+                    <ul class="spisok">
+                        <li>Запоминать данные на стороне клиента (local storage).</li>
+                        <li>Реагировать на действия пользователя, щелчки мыши, перемещения указателя, нажатия клавиш.</li>
+                        <li>Отправлять сетевые запросы на удалённые сервера, скачивать и загружать файлы (технологии AJAX и COMET).</li>
+                        <li>Получать и устанавливать куки, задавать вопросы посетителю, показывать сообщения.</li>
+                        <li>Добавлять новый HTML-код на страницу, изменять существующее содержимое, модифицировать стили.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container3">
+                <div class="content4"><img id="gifka" src="gifka.gif"></div>
+                <div class="content5">
+                    <span>В то же время, использование JS не всегда может оказать уместным.</span>
+                    <br>Например, при добавлении совсем простых стилевых элементов, особенно если их совсем мало лучше использовать CSS, чтобы не создавать лишних файлов</br>
+                    <br>Итак, давайте рассмотрим ряд примеров, которые демонстрируют возможности, которые можно получить при использовании Javascript.</br>
+                </div>
+            </div>
+            <div class="container4">
+                <div class="content6">
+                    <div class="block1">
+                        <div id="how_1">
+                            <button class="closeHow" id="closeHow1" onclick="Close1()" >Закрыть</button>
+                            <p>Для отображения имени пользователя после перезагрузки 
+                            страницы была использована технология Local Storage (локальное хранилище). 
+                            Мы создали переменную, в к-ю передали значение имени, введенного пользователем (при помощи метода getElementById()), 
+                            а затем сохранили ее в локальное хранилище. Таким образом, при надобности мы всегда сможем 
+                            "достать" имя пользователя из Local Storage и использовать его.</p>
+                        </div>
+                        <p class="punkt">Пожалуйста, введите свое имя:<label for="name"><input type="text" class="name" id="name" required placeholder="Вас зовут..."></label></p>
+                        <div><p id="hello"></p></div>
+                        <button class="submitData" onclick="Name()" >Отправить</button>
+                        <button class="submitData" onclick="Punkt1()" >Как повторить?</button>
+                        
+                    </div>
+                    <div class="block2">
+                        <div id="how_2">
+                            <button class="closeHow" id="closeHow2" onclick="Close2()" >Закрыть</button>
+                            <p>Для нахождения площади треугольника мы создали переменные side и height, а затем 
+                                передали в них значения (при помощи метода getElementById()), введенные пользователем. 
+                                Затем мы посчитали площадь по формуле и при помощи методов getElementById() и innerHTML() (чтобы получить содержимое элемента) 
+                                присвоили нужному элементу ранее посчитанное значение площади.
+                            </p>
+                        </div>
+                        <p class="punkt" id="math">1)Математические вычисления</p>
+                        <br>На веб-страницах очень часто возникает необходимость произвести те или иные вычисления.С помощью Javascript это можно легко сделать!</br>
+                        <p>Например, введите основание и высоту треугольника в одной ед. измерения: </p>
+                        <label for="q1_1"><input type="text" class="quest" id="q1_1" required placeholder="Основание"></label>
+                        <label for="q1_2"><input type="text" class="quest" id="q1_2" required placeholder="Высота"></label>
+                        <div><p id="area"></p></div>
+                        <button class="submitData" onclick="Area()">Отправить</button>
+                        <button class="submitData" onclick="Punkt2()" >Как повторить?</button>
+                        
+                    </div>
+                    <div class="block3">
+                        <div id="how_3">
+                            <button class="closeHow" id="closeHow3" onclick="Close3()" >Закрыть</button>
+                            <p>Для сравнения введенных строк мы создали две переменные: st1 и st2, в которые передали введенные 
+                                пользователем строки. Затем с помощью операторов if-else и свойства строк length 
+                                мы сраниваем длины введенных строк, если они равны, то мы присваиваем элементу значение True с помощью getElementById(),
+                                 иначе значение False.
+                            </p>
+                        </div>
+                        <p class="punkt" id="compare">2)Сравнение введенных строк</p>
+                        <br>Используя Javascript вы можете производить сравнение введенных данных. Это особенно актуально при выборе нового пароля на различных веб-страницах. То есть при двукратном его введении вы можете удостовериться в правильности написания.</br>
+                        <br>Рассмотрим более простой пример, где проверяться будет не набор символов, а их количество. При одинаковом количестве введенных символов вы получите значение true.</br>
+                        <p>Введите вашу первую строку <label for="q2_1"><input type="text" class="quest" id="q2_1" required placeholder="Введите строку"></label></p>
+                        <p>Введите вашу вторую строку <label for="q2_2"><input type="text" class="quest" id="q2_2" required placeholder="Введите строку"></label></p>
+                        <div><p id="comparator"></p></div>
+                        <button class="submitData" id="but_2" onclick="Compare()">Отправить</button>
+                        <button class="submitData" onclick="Punkt3()" >Как повторить?</button>
+                        
+                    </div>
+                    <div class="block4">
+                        <div id="how_4">
+                            <button class="closeHow" id="closeHow4" onclick="Close4()" >Закрыть</button>
+                            <p>Для нахождения минимума и максимума во введенном массиве мы создаем переменную 
+                                и передаем в нее строку, которую ввел пользователь, разделяя ее на элементы массива методом split(). 
+                                Обрабатываем случай, когда пользователь ввел не 5 элементов (просим повторить ввод с нужным количеством). 
+                                Затем ищем максимальный и минимальный элемент с помощью ф-ий Math.max.apply() и Math.min.apply(),
+                                 и передаем результат в переменные max и min, а затем выводим их с помощью getElementById().
+                            </p>
+                            <img src="code2.png" id="code2">
+                        </div>
+                        <p class="punkt" id="max">3)Определение максимального и минимального значения среди введенных</p>
+                        <br>С помощью JS можно узнать максимальный и минимальный элемент введенного массива.</br>
+                        <p>Введите массив из пяти элементов через пробел <label for="q3"><input type="text" class="quest" id="q3" required placeholder="Введите массив"></label></p>
+                        
+                        <button class="submitData" id="but_3" onclick="MaxMin()">Отправить</button>
+                        <button class="submitData" onclick="Punkt4()" >Как повторить?</button>
+                        
+                        <div><p id="maxi"></p></div>
+                        <div><p id="mini"></p></div>
+                    </div>
+                    <div class="block5">
+                        <div id="how_5">
+                            <button class="closeHow" id="closeHow5" onclick="Close5()" >Закрыть</button>
+                            <p>Для таймера мы создаем переменные count, minute = 0, second = 0 и hour = 0. Затем мы создаем переменную с именем Timer, 
+                                делаем внутри нее метод addTime(), который будет работать как своеобразные часы (используем методы getElementById().innerHTML и window.setTimeout()).
+                                 Затем создаем методы start() (создаем новую переменную Timer), pause() (очищаем count и останавливаем наши часы) и reset() (обнуляем все данные),
+                                  которые потом привяжем к кнопкам на экране пользователя.
+                            </p>
+                        </div>
+                        <p class="punkt" id="timer">4)Таймер</p>
+                        <button id="start" onclick="Timer.start()" id="start">Запустить</button>
+                        <button id="pause" onclick="Timer.pause()" id="pause">Остановить</button>
+                        <button id="reset" onclick="Timer.reset()" id="reset">Сбросить</button>
+                        
+                    
+                    <div class="timer_count">
+                        <p id="hour"> 0</p> 
+                        <p id="min"> 0</p> 
+                        <p id="sec"> 0</p>
+                    </div>
+                    <button class="submitData" onclick="Punkt5()" >Как повторить?</button>
+                    </div>
+                    <div class="block6">
+                        <div id="how_6">
+                            <button class="closeHow" onclick="Close6()" >Закрыть</button>
+                            <p>Для теста мы создаем переменные answers (куда передадим с помощью метода querySelectorAll() все элементы div с вопросами), score,
+                                rightAnswers (куда передадим массив с id правильных ответов), falseAnswers и j. Затем в цикле создадим
+                                 переменную chosenAnswers, куда с каждым проходом по циклу будем присваивать отмеченный пользователем ответ (из answers). 
+                                 Если попадается пустой вопрос, мы засчитываем его за неправильный (в массив falseAnswers), 
+                                 в остальных случаях мы сверяем отмеченный пользователем ответ с эл-ми массива rightAnswers, если ответ правильный, 
+                                 прибавляем пользователю очки, если нет, то запоминаем (в массив falseAnswers) в каком вопросе он ошибся.
+                            </p>
+                            <img src="code.png" id="code">
+                        </div>
+                        
+                        <p class="punkt" id="test">5)Тест на знание JavaScript</p>
+                        <p>Для проверки своих знаний вы можете пройти тест по JS. Выберите по каждому вопросу один вариант ответа. После отправки вы сможете посмотреть свой результат.</p>
+                        <button class="submitData" onclick="Punkt6()" >Как повторить?</button>
+                        
+                        <div class=test_q>
+                            <p><label>1. Что такое JS?</p>
+                                <p><input type="radio" name="test1" required value="1" id="1_1">Динамический, слабо типизированный язык</p>
+                                <p><input type="radio" name="test1" required value="2" id="1_2">Язык разметки</p>
+                                <p><input type="radio" name="test1" required value="3" id="1_3">Чисто бъектно-ориентированный язык</p>
+                            </label>
+                        </div>
+                        <div class=test_q>
+                            <p><label>2. Какая основная функция JavaScript?</p>
+                                <p><input type="radio" name="test2" required value="1" id="2_1">Написание сложных программ при помощи ООП</p>
+                                <p><input type="radio" name="test2" required value="2" id="2_2">Создание динамически обновляемого контента, интерактива на веб-страницах</p>
+                                <p><input type="radio" name="test2" required value="3" id="2_3">Классическое программирование</p>
+                            </label>
+                       </div>
+                       <div class=test_q>
+                        <p><label>3. Укажите, где перечислены все методы вызова всплывающих окон</p>  
+                                <p><input type="radio" name="test3" required id="3_1">alert(), prompt(), appendChild()</p>
+                                <p><input type="radio" name="test3" required id="3_2">alert(), confirm(), prompt()</p>
+                                <p><input type="radio" name="test3" required id="3_3">confirm(), cloneNode(), setAttribute()</p>
+                            </label>
+                       </div>
+                       <div class=test_q>
+                        <p><label>4. Укажите метод для изменения регистра на строчные буквы</p>  
+                                <p><input type="radio" name="test4" required id="4_1">toUpperCase()</p>
+                                <p><input type="radio" name="test4" required id="4_2" class="true">toLowerCase()</p>
+                                <p><input type="radio" name="test4" required id="4_3">localeCompare()</p>
+                            </label>
+                       </div>
+                       <div class=test_q>
+                        <p><label>5. Какие существуют числовые типа данных в JS?</p>  
+                                <p><input type="radio" name="test5" required id="5_1">Number</p>
+                                <p><input type="radio" name="test5" required id="5_2">int, float, double</p>
+                                <p><input type="radio" name="test5" required id="5_3" class="true">Number, BigInt</p>
+                            </label>
+                       </div>
+                       <div class=test_q>
+                        <p><label>6. При помощи какого метода можно округлить число до ближайшего?</p>  
+                                <p><input type="radio" name="test6" required id="6_1">math.floor()</p>
+                                <p><input type="radio" name="test6" required id="6_2">math.ceil()</p>
+                                <p><input type="radio" name="test6" required id="6_3" class="true">math.round()</p>
+                            </label>
+                       </div>
+                       <div class=test_q>
+                        <p><label>7. Что такое Timestamp?</p>  
+                                <p><input type="radio" name="test7" required id="7_1">Время выполнения программы</p>
+                                <p><input type="radio" name="test7" required id="7_2" class="true">Временная метка</p>
+                                <p><input type="radio" name="test7" required id="7_3">Текущее время</p>
+                            </label>
+                       </div>
+                       <div class=test_q>
+                        <p><label>8. Равноправны ли обычные и двойные кавычки и JavaScript?</p>  
+                                <p><input type="radio" name="test8" required id="8_1" class="true">Да</p>
+                                <p><input type="radio" name="test8" required id="8_2">Нет</p>
+                                <p><input type="radio" name="test8" required id="8_3">Зависит от ситуации</p>
+                            </label>
+                      </div>
+                      <div class=test_q>
+                       <p><label>9. Что значит NaN?</p>  
+                            <p><input type="radio" name="test9" required id="9_1"class="true">Ошибка, когда не число делится на число</p>
+                            <p><input type="radio" name="test9" required id="9_2">Ошибка при делении на 0</p>
+                            <p><input type="radio" name="test9" required id="9_3">Тип числа</p>
+                        </label>
+                       </div>
+                       <div class=test_q>
+                        <p><label>10. Что такое транспайлер?</p>  
+                                <p><input type="radio" name="test10" required id="10_1">Программа, к-я учит браузеры понимать то, что они еще не поддерживают</p>
+                                <p><input type="radio" name="test10" required id="10_2">Программа, переворачивающая строку</p>
+                                <p><input type="radio" name="test10" required id="10_3" class="true">Программа, преобразующая код на одном языке в код на другом</p>
+                            </label>
+                        </div>
+                        <div><p id="testResult"></p></div>
+                        <div><p id="testTrueFalse"></p></div>
+                        <p><button class="submitData" id="fifth" onclick="Test()">Отправить</button></p>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
+    </main>
+    <footer>
+        <div class="container__2">
+            <p>Контакты: +7-912-345-67-89</p>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
+
+
