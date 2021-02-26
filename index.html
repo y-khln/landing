@@ -12,7 +12,7 @@
 </head>
 
 <body onload="LoadName()">
-    <div>
+        <div>
         <img src="back.jpg" id="zastavka" onclick="Back()">
         <p id=zast_text></p>
     </div>
@@ -109,10 +109,13 @@
                             а затем сохранили ее в локальное хранилище. Таким образом, при надобности мы всегда сможем 
                             "достать" имя пользователя из Local Storage и использовать его.</p>
                         </div>
-                        <p class="punkt">Пожалуйста, введите свое имя:<label for="name"><input type="text" class="name" id="name" required placeholder="Вас зовут..."></label></p>
+                        <p class="punkt">Пожалуйста, введите свое имя:</p>
+                        <form action="//msiter.ru/action_page.php" method="post">
+                            <input type="text" class="name" id="name" pattern="^[А-Яа-яЁё\s]+$" required placeholder="Вас зовут..." >
+                            <button type="submit" class="submitData" onclick="Name()" >Отправить</button>
+                        </form>
                         <div><p id="hello"></p></div>
-                        <button class="submitData" onclick="Name()" >Отправить</button>
-                        <button class="submitData" onclick="Punkt1()" >Как повторить?</button>
+                        <button class="submitData" onclick="Punkt1()">Как повторить?</button>
                         
                     </div>
                     <div class="block2">
@@ -127,12 +130,13 @@
                         <p class="punkt" id="math">1)Математические вычисления</p>
                         <br>На веб-страницах очень часто возникает необходимость произвести те или иные вычисления.С помощью Javascript это можно легко сделать!</br>
                         <p>Например, введите основание и высоту треугольника в одной ед. измерения: </p>
-                        <label for="q1_1"><input type="text" class="quest" id="q1_1" required placeholder="Основание"></label>
-                        <label for="q1_2"><input type="text" class="quest" id="q1_2" required placeholder="Высота"></label>
+                        <form action="//msiter.ru/action_page.php" method="post">
+                            <label for="q1_1"><input type="text" class="quest" id="q1_1" required pattern="^[0-9]+$" placeholder="Основание"></label>
+                            <label for="q1_2"><input type="text" class="quest" id="q1_2" required pattern="^[0-9]+$" placeholder="Высота"></label>
+                            <button type="submit" class="submitData" onclick="Area()">Отправить</button>
+                        </form>
                         <div><p id="area"></p></div>
-                        <button class="submitData" onclick="Area()">Отправить</button>
                         <button class="submitData" onclick="Punkt2()" >Как повторить?</button>
-                        
                     </div>
                     <div class="block3">
                         <div id="how_3">
@@ -165,10 +169,13 @@
                             <img src="code2.png" id="code2">
                         </div>
                         <p class="punkt" id="max">3)Определение максимального и минимального значения среди введенных</p>
-                        <br>С помощью JS можно узнать максимальный и минимальный элемент введенного массива.</br>
-                        <p>Введите массив из пяти элементов через пробел <label for="q3"><input type="text" class="quest" id="q3" required placeholder="Введите массив"></label></p>
+                        <br>С помощью JS можно узнать максимальный и минимальный элемент введенного числового массива.</br>
+                        <p>Введите пять чисел через пробел </p>
+                        <form action="//msiter.ru/action_page.php" method="post">
+                                <label for="q3"><input type="text" class="quest" id="q3" required pattern="^[ 0-9]+$" placeholder="Введите массив"></label>
+                                <button class="submitData" id="but_3" onclick="MaxMin()">Отправить</button>
+                            </form>
                         
-                        <button class="submitData" id="but_3" onclick="MaxMin()">Отправить</button>
                         <button class="submitData" onclick="Punkt4()" >Как повторить?</button>
                         
                         <div><p id="maxi"></p></div>
@@ -184,16 +191,27 @@
                             </p>
                         </div>
                         <p class="punkt" id="timer">4)Таймер</p>
-                        <button id="start" onclick="Timer.start()" id="start">Запустить</button>
-                        <button id="pause" onclick="Timer.pause()" id="pause">Остановить</button>
-                        <button id="reset" onclick="Timer.reset()" id="reset">Сбросить</button>
+                        <button id="start" onclick="Timer.start()">Запустить</button>
+                        <button id="pause" onclick="Timer.pause()">Остановить</button>
+                        <button id="reset" onclick="Timer.reset()">Сбросить</button>
                         
-                    
                     <div class="timer_count">
-                        <p id="hour"> 0</p> 
-                        <p id="min"> 0</p> 
-                        <p id="sec"> 0</p>
+                        <div class="num">
+                            <p id="hour2"> 0</p> 
+                            <p id="hour"> 0 0</p> 
+                        </div>
+                        <span> : </span>
+                        <div class="num">
+                            <p id="minu2"> 0</p> 
+                            <p id="minu"> 0 0</p> 
+                        </div>
+                        <span> : </span>
+                        <div class="num">
+                            <p id="seco2"> 0</p>
+                            <p id="seco"> 0 0</p>
+                        </div>                      
                     </div>
+                    
                     <button class="submitData" onclick="Punkt5()" >Как повторить?</button>
                     </div>
                     <div class="block6">
@@ -212,7 +230,7 @@
                         <p class="punkt" id="test">5)Тест на знание JavaScript</p>
                         <p>Для проверки своих знаний вы можете пройти тест по JS. Выберите по каждому вопросу один вариант ответа. После отправки вы сможете посмотреть свой результат.</p>
                         <button class="submitData" onclick="Punkt6()" >Как повторить?</button>
-                        
+                        <form action="//msiter.ru/action_page.php" method="post">
                         <div class=test_q>
                             <p><label>1. Что такое JS?</p>
                                 <p><input type="radio" name="test1" required value="1" id="1_1">Динамический, слабо типизированный язык</p>
@@ -283,10 +301,10 @@
                                 <p><input type="radio" name="test10" required id="10_3" class="true">Программа, преобразующая код на одном языке в код на другом</p>
                             </label>
                         </div>
-                        <div><p id="testResult"></p></div>
-                        <div><p id="testTrueFalse"></p></div>
-                        <p><button class="submitData" id="fifth" onclick="Test()">Отправить</button></p>
-                        
+                    </form>    
+                    <p><button class="submitData" id="fifth" onclick="Test()">Отправить</button></p>
+                    <div><p id="testResult"></p></div>
+                    <div><p id="testTrueFalse"></p></div>
                     </div>
 
                 </div>

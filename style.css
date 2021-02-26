@@ -3,8 +3,10 @@ body{
   flex-direction: column;
   min-height: 100vh;
 }
-
-/* шапка */
+/* ------------------
+       ШАПКА
+--------------------- *
+/* шапка основная */
 
 a{
   text-decoration: none;
@@ -55,6 +57,7 @@ button{
 button:hover{
     background-color: #69e;
 }
+
 .menu ul li{
   padding: 12px;
   width: 110px;
@@ -101,7 +104,9 @@ button:hover{
   display: block;
 }
 
-/* контент */
+/* ------------------
+ГЛАВНАЯ СТРАНИЦА INDEX
+--------------------- */
 .container0{
   display: flex;
   flex-direction: row;
@@ -233,8 +238,9 @@ button:hover{
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
 }
+
 #but_3{
-  margin: -50px 0 0 650px;
+  margin: -50px 0 0 50px;
 }
 .content6{
   display: flex;
@@ -272,6 +278,7 @@ button:hover{
 .block1,.block2,.block3,.block4 {
   display: flex;
   flex-direction: column;
+  
 }
 .submitData {
     width: 170px;
@@ -287,13 +294,23 @@ margin: 15px 5px 0 0;
 #q1_2{
   margin: -39px 0 0 180px;
 }
+#q3{
+  margin: 0 0 0 0;
+}
 .timer_count{
   display: flex;
   margin: 20px 0 0 0;
 }
-#hour,#min,#sec{
+#hour,#minu,#seco,#hour2,#minu2,#seco2{
   margin: 0 10px 0 0;
   font-size: 26px;
+}
+#hour2,#minu2,#seco2{
+  display:none;
+}
+.num{
+  display:flex;
+  flex-direction: row;
 }
 #hello,#comparator,#maxi,#mini,#testResult{
   font-family: 'Roboto', sans-serif;
@@ -350,7 +367,6 @@ margin: 15px 5px 0 0;
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
 }
-
 /* ------------------
         ПОДВАЛ
 --------------------- */
