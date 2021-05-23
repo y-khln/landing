@@ -37,28 +37,28 @@ function init(resultServer){
     //Задаем иконку погоды
     switch(resultServer.weather[0].main){
         case 'Clear':
-            document.body.style.backgroundImage = 'url("sunny.png")';
+            document.getElementById('apiBlock').style.backgroundImage = 'url("sunny.png")';
             break;
 
         case 'Clouds':
-            document.body.style.backgroundImage = 'url("cloudy(1).png")';
+            document.getElementById('apiBlock').style.backgroundImage = 'url("cloudy(1).png")';
             break;
 
         case 'Rain':
         case 'Drizzle':
-            document.body.style.backgroundImage = 'url("rain.png")';
+            document.getElementById('apiBlock').style.backgroundImage = 'url("rain.png")';
             break;
 
         case 'Mist':
-            document.body.style.backgroundImage = 'url("mist.png")';
+            document.getElementById('apiBlock').style.backgroundImage = 'url("mist.png")';
             break; 
 
         case 'Thunderstorm':
-            document.body.style.backgroundImage = 'url("storm.png")';
+            document.getElementById('apiBlock').style.backgroundImage = 'url("storm.png")';
             break;
 
         case 'Snow':
-            document.body.style.backgroundImage = 'url("snow.png")';
+            document.getElementById('apiBlock').style.backgroundImage = 'url("snow.png")';
             break;   
 
         default:
